@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="employeeBean"
+	class="com.example.learn.autowire.Employee">
+		<property name="name" value="abhisekh" />
+		<property name="empId" value="312542345" />
+	</bean>
+
+
+	<bean id="e1" class="com.example.learn.autowire.Employee" primary="true">
+		<property name="name" value="RamSingh" />
+		<property name="empId" value="312542345" />
+	</bean>
+
+
+	<bean id="address" class="com.example.learn.autowire.Address">
+		<property name="street" value="Sector 34" />
+		<property name="zipCode" value="Delhi"></property>
+
+	</bean>
+
+
+	<bean id="employeeService"
+	class="com.example.learn.autowire.EmployeeService"
+	autowire="byType">
+	</bean>
+
+
+
+	<!-- 100 classes -->
+
+
+
+
+
+</beans>
